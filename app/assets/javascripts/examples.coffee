@@ -87,7 +87,6 @@ $ ->
     y = d3.scaleLinear().rangeRound([height, 0])
     g = svg.append('g').attr('transform', "translate(#{margin.left},#{margin.top})")
     x.domain(data.map((d) -> d.code))
-    console.log(data.map((d) -> d.code))
     y.domain([0, d3.max(data, (d) -> d.population / 1000000)])
     g.append('g')
      .attr('class', 'axis axis--x')
